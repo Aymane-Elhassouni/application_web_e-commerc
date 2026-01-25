@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register-Boutika</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+  <div class="min-h-screen flex items-center justify-center bg-gray-50">
+    <form class="w-full max-w-md p-6 bg-white shadow-md rounded-md" action="register-submit" method="POST">
+      <div class="relative mb-4">
+        <input type="text" id="firstname" name="firstname" placeholder="First name"
+          class="peer w-full border-b border-gray-400 bg-transparent py-2 placeholder-transparent focus:border-blue-500 focus:outline-none"
+          required>
+        <label for="first_name"
+          class="absolute left-0 top-2 text-gray-500 text-sm transition-all duration-150 peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-focus:-top-3 peer-focus:text-blue-500 peer-focus:text-xs">First
+          name</label>
+      </div>
+
+      <div class="relative mb-4">
+        <input type="text" id="lastname" name="lastname" placeholder="Last name"
+          class="peer w-full border-b border-gray-400 bg-transparent py-2 placeholder-transparent focus:border-blue-500 focus:outline-none"
+          required>
+        <label for="last_name"
+          class="absolute left-0 top-2 text-gray-500 text-sm transition-all duration-150 peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-focus:-top-3 peer-focus:text-blue-500 peer-focus:text-xs">Last
+          name</label>
+      </div>
+
+      <div class="relative mb-4">
+        <input type="email" id="email" name="email" placeholder="Email"
+          class="peer w-full border-b border-gray-400 bg-transparent py-2 placeholder-transparent focus:border-blue-500 focus:outline-none"
+          required>
+        <label for="email"
+          class="absolute left-0 top-2 text-gray-500 text-sm transition-all duration-150 peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-focus:-top-3 peer-focus:text-blue-500 peer-focus:text-xs">Email</label>
+      </div>
+
+      <div class="relative z-0 w-full group text-left">
+        <select name="role" id="role"
+          class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-[#6d28d9] focus:text-gray-900 peer"
+          required>
+          <option value="" disabled selected hidden></option>
+          <option value="admin">Admin</option>
+          <option value="client">Client</option>
+        </select>
+        <label for="role"
+          class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#6d28d9] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Select
+          Role</label>
+      </div>
+
+      <div class="relative mb-4">
+        <input type="password" id="password" name="password" placeholder="Password"
+          class="peer w-full border-b border-gray-400 bg-transparent py-2 placeholder-transparent focus:border-blue-500 focus:outline-none"
+          required>
+        <label for="password"
+          class="absolute left-0 top-2 text-gray-500 text-sm transition-all duration-150 peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-focus:-top-3 peer-focus:text-blue-500 peer-focus:text-xs">Password</label>
+      </div>
+
+      <button type="submit"
+        class="w-full mt-6 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md text-sm font-medium transition-colors duration-150">Register</button>
+      <p class="text-sm text-gray-500 mt-6">
+        Already have an account?
+        <a href="login" class="text-[#6d28d9] font-semibold hover:underline transition-all">
+          Login
+        </a>
+      </p>
+    </form>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutika</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+  <nav class="bg-[#1f1d2b] py-4 px-8 flex items-center justify-between shadow-md">
+
+    <div class="text-white text-2xl font-bold tracking-tight">
+      Boutika
+    </div>
+
+    <div class="hidden md:flex items-center gap-10">
+      <div class="relative group cursor-pointer">
+        <span class="text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+          Products
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </span>
+      </div>
+      <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
+      <a href="#" class="text-gray-300 hover:text-white transition-colors">Careers</a>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="logout"
+        class="bg-[#6d28d9] hover:bg-[#7c3aed] text-white px-5 py-2 rounded-lg font-semibold transition-all shadow-[0_0_12px_rgba(109,40,217,0.4)] active:scale-95 text-sm">
+        Logout
+      </a>
+    </div>
+
+  </nav>
+  <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default m-50">
+    <table class="w-full text-sm text-left rtl:text-right text-body">
+      <thead class="bg-neutral-secondary-soft border-b border-default">
+        <tr>
+            {% for key, value in client %}
+              {% if key != 'password' %}
+              <th class="px-4 py-2">{{ key|capitalize }}</th>
+            {% endif %}
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          {% for key, value in client %}
+            {% if key != 'password' %}
+              <td class="px-4 py-2">{{ value }}</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</body>
+
+</html>

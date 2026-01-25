@@ -1,0 +1,17 @@
+{
+    "name": "vendor/app",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aymane-Elhassouni",
+            "email": "aymane.elhassouni3@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.22"
+    }
+}
